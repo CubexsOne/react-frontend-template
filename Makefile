@@ -6,12 +6,12 @@ help:
 run: ## Starts web-ui service
 	@./scripts/make-run.sh
 
-# test: ## Starts web-ui service with unit-tests and ui-tests
-# 	@make unit-test
+test: ## Starts web-ui service with unit-tests and ui-tests
+	@make unit-test
 # 	@make ui-test
 
-# unit-test: ## Starts web-ui service with unit-tests
-# 	@./scripts/make-unit-test.sh
+unit-test: ## Starts web-ui service with unit-tests
+	@./scripts/make-unit-test.sh
 
 # ui-test: ## Starts web-ui service with ui-tests
 # 	@./scripts/make-unit-test.sh
