@@ -9,8 +9,8 @@
     "eslint:fix": "eslint . --fix --ext .ts,tsx",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "test-ci": "cross-env CI=true jest --env=jsdom --coverage --testResultsProcessor=jest-multiple-result-processors",
-    "test": "jest --env=jsdom"
+    "test-ci": "cross-env CI=true jest --env=jsdom --coverage --config=jest.config.ts",
+    "test": "jest --env=jsdom --config=jest.config.ts"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
@@ -43,5 +43,8 @@
     "ts-node": "^10.9.1",
     "typescript": "^4.6.4",
     "vite": "^3.1.0"
+  },
+  "jest": {
+    "testResultsProcessor": "jest-multiple-result-processors"
   }
 }
