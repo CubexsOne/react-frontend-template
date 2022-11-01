@@ -8,13 +8,11 @@ prepare: ## Prepare deployment
 
 deploy-prod: ## Prepare env variables and deploy to production
 	$(eval export NAMESPACE := prjctns)
-	$(eval export HOSTNAME := prjcthost)
 	$(eval export ENVIRONMENT := production)
 	@make deploy
 
 deploy-int: ## Prepare env variables and deploy to integration
 	$(eval export NAMESPACE := prjctns-int)
-	$(eval export HOSTNAME := int.prjcthost)
 	$(eval export ENVIRONMENT := integration)
 	@make deploy
 
