@@ -17,13 +17,11 @@ pipeline {
       }
     }
 
-    // stage("Test") {
-    //   steps {
-    //     retry(5) {
-    //       makeTest()
-    //     }
-    //   }
-    // }
+    stage("Test") {
+      steps {
+        makeTest()
+      }
+    }
 
     stage("Build") {
       steps {
@@ -98,8 +96,13 @@ def clearDocker() {
 }
 
 def makeTest() {
-  timeout(time: 15, unit: 'MINUTES') {
-    sh "make test-ci"
+  timeout(time: 10, unit: 'MINUTES') {
+    def status = sh returnStatus: true, script: "make test-ci"
+    junit "junit.xml"
+    if (status != 0) {
+      error("Exited with non-zero status (test or lint fail)")
+    }
+    sh returnStatus: true, script: "rm junit.xml"
   }
 }
 
