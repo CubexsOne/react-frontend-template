@@ -6,5 +6,5 @@ test('Example unit-test', () => {
   render(<App />)
   const componentText = screen.getByText('React Frontend Template')
 
-  expect(componentText).toBeTruthy()
+  expect(componentText).toBeFalsy()
 })
