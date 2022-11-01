@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc && vite build",
     "eslint:check": "eslint . --ext .ts,tsx",
     "eslint:fix": "eslint . --fix --ext .ts,tsx",

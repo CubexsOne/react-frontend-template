@@ -20,6 +20,8 @@ services:
       - ./public:/app/public
       - ./src:/app/src
       - ./index.html:/app/index.html
+    networks:
+      - local_prjctnet
     command: ['sh', '-c', 'cd /app && npm install && npm run dev']
 
   # web-ui-test:
