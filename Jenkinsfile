@@ -14,6 +14,9 @@ pipeline {
     stage("Prepare") {
       steps {
         dockerLogin()
+        dir("scripts") {
+          sh "./create-docker-network.sh"
+        }
       }
     }
 
