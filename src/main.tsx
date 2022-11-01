@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+
 import 'normalize.css'
-import './fonts.scss'
+import './assets/fonts.scss'
+import './assets/styles.scss'
 
 import App from './App'
 
