@@ -99,7 +99,7 @@ def clearDocker() {
 
 def makeTest() {
   timeout(time: 15, unit: 'MINUTES') {
-    sh "make test"
+    sh "make test-ci"
   }
 }
 

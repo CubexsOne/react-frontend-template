@@ -10,8 +10,14 @@ test: ## Starts web-ui service with unit-tests and ui-tests
 	@make unit-test
 # 	@make ui-test
 
+test-ci: ## Test run for ci pipeline
+	@make ci-unit-test
+
 unit-test: ## Starts web-ui service with unit-tests
 	@./scripts/make-unit-test.sh
+
+ci-unit-test: ## Starts web-ui service with unit-tests for CI
+	@./scripts/make-ci-unit-test.sh
 
 # ui-test: ## Starts web-ui service with ui-tests
 # 	@./scripts/make-unit-test.sh
