@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# TODO: Remove local service
+docker rm -f local-web-ui-1 || true
 echo "Starting web-ui..."
 docker compose up web-ui-run
 echo "Stopping web-ui..."
